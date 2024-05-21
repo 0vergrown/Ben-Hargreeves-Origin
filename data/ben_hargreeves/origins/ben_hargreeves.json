@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"ben_hargreeves:physical_body",
+		"ben_hargreeves:tentacles/toggle_power",
+		"ben_hargreeves:friends",
+		"ben_hargreeves:strength",
+		"ben_hargreeves:tentacle_deflection",
+		"ben_hargreeves:ghost",
+		"ben_hargreeves:weak_body"
+	],
+	"icon": "minecraft:echo_shard",
+	"order": 10,
+	"impact": 3,
+	"name": "Ben Hargreeves",
+	"description": "You have died and are now a ghost. Your ability is to summon eldritch tentacles from a portal on your stomach. You can sometimes interact with the environment even though you're a ghost because of your connection with your brother Klaus."
+}

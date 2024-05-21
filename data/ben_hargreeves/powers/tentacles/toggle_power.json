@@ -1,0 +1,40 @@
+{
+    "name": "Eldritch Tentacles",
+    "description": "Summon eldritch tentacles from a portal in his stomach. [Secondary]",
+    "type": "apoli:multiple",
+    "toggle": {
+        "type": "apoli:toggle",
+        "active_by_default": false,
+        "key": "key.origins.secondary_active",
+        "retain_state": false
+    },
+    "toggle_check": {
+        "type": "apoli:action_over_time",
+        "rising_action": {
+            "type": "apoli:grant_power",
+            "power": "*:tentacles/terror_tendrils",
+            "source": "*:*"
+        },
+        "falling_action": {
+            "type": "apoli:revoke_power",
+            "power": "*:tentacles/terror_tendrils",
+            "source": "*:*"
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "apoli:power_active",
+                    "power": "*:*_toggle"
+                },
+                {      
+                    "type":"origins:resource",
+                    "resource":"ben_hargreeves:physical_body_form",
+                    "comparison":"==",
+                    "compare_to":1
+                }
+            ]
+        }
+    }
+}

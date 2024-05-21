@@ -1,0 +1,12 @@
+{
+    "name": "Strength",
+    "description": "You used to be a hero so you know how to fight which means you deal increased damage.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.attack_damage",
+        "operation": "multiply_base",
+        "value": 0.25,
+        "name": "Max Damage Increase"
+    },
+    "update_health": false
+}
