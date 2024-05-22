@@ -110,7 +110,7 @@
              "actions":[
                 {
                    "type":"apoli:damage",
-                   "amount":7,
+                   "amount":1,
                    "damage_type":"minecraft:magic"
                 },
                 {

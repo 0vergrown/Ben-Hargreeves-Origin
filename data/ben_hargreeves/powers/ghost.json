@@ -16,17 +16,17 @@
 	   }
 	},
 	"no_damage_taken":{
-		"type": "origins:modify_damage_taken",
-		"modifier":{
-			"operation":"multiply_total",
-			"value":-1.0
-		 },
-		 "condition":{
-			"type":"origins:resource",
-			"resource":"ben_hargreeves:physical_body_form",
-			"comparison":"==",
-			"compare_to":0
-		 }
+	   "type":"origins:modify_damage_taken",
+	   "modifier":{
+		  "operation":"multiply_total",
+		  "value":-1.0
+	   },
+	   "condition":{
+		  "type":"origins:resource",
+		  "resource":"ben_hargreeves:physical_body_form",
+		  "comparison":"==",
+		  "compare_to":0
+	   }
 	},
 	"pervent_block_place":{
 	   "type":"origins:prevent_block_place",

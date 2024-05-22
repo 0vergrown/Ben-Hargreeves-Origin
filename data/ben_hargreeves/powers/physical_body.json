@@ -40,10 +40,44 @@
 	   },
 	   "start_value":0,
 	   "max_action":{
-		  "type":"origins:change_resource",
-		  "resource":"ben_hargreeves:physical_body_form",
-		  "change":0,
-		  "operation":"set"
+		  "type":"origins:and",
+		  "actions":[
+			 {
+				"type":"origins:change_resource",
+				"resource":"ben_hargreeves:physical_body_form",
+				"change":0,
+				"operation":"set"
+			 },
+			 {
+				"type":"origins:apply_effect",
+				"effects":[
+				   {
+					  "effect":"minecraft:jump_boost",
+					  "duration":900,
+					  "amplifier":199,
+					  "is_ambient":true,
+					  "show_particles":false,
+					  "show_icon":false
+				   },
+				   {
+					  "effect":"minecraft:slowness",
+					  "duration":900,
+					  "amplifier":199,
+					  "is_ambient":true,
+					  "show_particles":false,
+					  "show_icon":false
+				   },
+				   {
+					  "effect":"minecraft:blindness",
+					  "duration":900,
+					  "amplifier":199,
+					  "is_ambient":true,
+					  "show_particles":false,
+					  "show_icon":false
+				   }
+				]
+			 }
+		  ]
 	   }
 	},
 	"soul_body":{
@@ -184,19 +218,5 @@
 		  }
 	   },
 	   "interval":20
-	},
-	"death_at_timer_max":{
-	   "type":"origins:action_over_time",
-	   "rising_action":{
-		  "type":"apoli:execute_command",
-		  "command":"kill @s"
-	   },
-	   "interval":1,
-	   "condition":{
-		  "type":"origins:resource",
-		  "resource":"ben_hargreeves:physical_body_timer",
-		  "comparison":"==",
-		  "compare_to":300
-	   }
 	}
 }
