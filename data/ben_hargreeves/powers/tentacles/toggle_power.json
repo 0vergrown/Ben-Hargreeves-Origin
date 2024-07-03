@@ -11,14 +11,39 @@
     "toggle_check": {
         "type": "apoli:action_over_time",
         "rising_action": {
-            "type": "apoli:grant_power",
-            "power": "*:tentacles/terror_tendrils",
-            "source": "*:*"
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "apoli:grant_power",
+                    "power": "*:tentacles/terror_tendrils",
+                    "source": "*:*"
+                },
+                {    
+                    "type": "origins:apply_effect",
+                    "effect": {
+                    "effect": "minecraft:slowness",
+                    "amplifier": 1,
+                    "duration": -1,
+                    "is_ambient": false,
+                    "show_particles": false,
+                    "show_icon": true
+                    }
+                }
+            ]
         },
         "falling_action": {
-            "type": "apoli:revoke_power",
-            "power": "*:tentacles/terror_tendrils",
-            "source": "*:*"
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "apoli:revoke_power",
+                    "power": "*:tentacles/terror_tendrils",
+                    "source": "*:*"
+                },
+                {
+                    "type": "origins:clear_effect",
+                    "effect": "minecraft:slowness"
+                }
+            ]
         },
         "interval": 1,
         "condition": {

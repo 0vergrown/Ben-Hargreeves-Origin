@@ -54,5 +54,38 @@
 		  "comparison":"==",
 		  "compare_to":0
 	   }
+	},
+	"no_regen":{
+		"type": "origins:disable_regen",
+		"condition": {
+			"type":"origins:resource",
+			"resource":"ben_hargreeves:physical_body_form",
+			"comparison":"==",
+			"compare_to":0
+		}
+	},
+	"no_hunger_lost":{
+		"type": "origins:modify_exhaustion",
+		"modifier": {
+			"name": "Increased exhaustion",
+			"operation": "multiply_base",
+			"value": -100.0
+		},
+		"condition": {
+			"type":"origins:resource",
+			"resource":"ben_hargreeves:physical_body_form",
+			"comparison":"==",
+			"compare_to":0
+		}
+	},
+	"no_item_pickup":{
+		"type": "origins:prevent_item_pickup",
+		"priority": 0,
+		"condition": {
+			"type":"origins:resource",
+			"resource":"ben_hargreeves:physical_body_form",
+			"comparison":"==",
+			"compare_to":0
+		}
 	}
 }
